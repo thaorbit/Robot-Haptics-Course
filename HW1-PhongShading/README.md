@@ -74,9 +74,3 @@ Ghi chú thêm
 -----------
 - Nếu bạn muốn thay đổi tham số build (Debug/Release), thêm `-DCMAKE_BUILD_TYPE=Release` cho generator Makefile hoặc chọn cấu hình trong Visual Studio.
 - Có thể thêm file assets (textures, shaders) ở thư mục `assets/` nếu cần; nếu repo yêu cầu path cụ thể, đảm bảo copy đúng vị trí.
-
-Tác giả
-------
-Tác giả: (điền tên bạn ở đây)
-
-Nếu cần, tôi có thể giúp chỉnh README chi tiết hơn (ví dụ ghi rõ đường dẫn exe sau khi bạn cho biết generator bạn dùng). 
