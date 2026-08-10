@@ -16,7 +16,7 @@ Window::Window(int w, int h, const char* title) {
 
     handle = glfwCreateWindow(width, height, title, nullptr, nullptr);
     if (!handle) {
-        cout << "Tao cua so that bai" <<endl;
+        cout << "Tạo cửa sổ thất bại" <<endl;
         glfwTerminate();
         return;
     }
@@ -26,7 +26,7 @@ Window::Window(int w, int h, const char* title) {
     glfwShowWindow(handle);
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        cout << "Tao GLAD that bai" <<endl;
+        cout << "Tạo glad thất bại" <<endl;
         handle = nullptr;
         return;
     }

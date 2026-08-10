@@ -11,7 +11,7 @@
 using namespace std;
 using namespace glm;
 
-const char* vertexShaderSource = R"(
+const char *vertexShaderSource = R"(
     #version 330 core
     layout(location = 0) in vec3 aPos;
     layout(location = 1) in vec3 aNormal;

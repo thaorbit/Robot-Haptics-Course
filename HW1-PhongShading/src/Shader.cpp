@@ -1,7 +1,9 @@
 #include "Shader.h"
 #include <glm/gtc/type_ptr.hpp>
 
-Shader::Shader(const char* vertexSource, const char* fragmentSource) {
+using namespace glm;
+
+Shader::Shader(const char *vertexSource, const char *fragmentSource) {
     GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertexShader, 1, &vertexSource, nullptr);
     glCompileShader(vertexShader);
@@ -23,19 +25,19 @@ void Shader::use() {
     glUseProgram(programID);
 }
 
-void Shader::setMat4(const char* name, const glm::mat4& value) {
+void Shader::setMat4(const char* name, const mat4& value) {
     GLint loc = glGetUniformLocation(programID, name);
-    glUniformMatrix4fv(loc, 1, GL_FALSE, glm::value_ptr(value));
+    glUniformMatrix4fv(loc, 1, GL_FALSE, value_ptr(value));
 }
 
-void Shader::setMat3(const char* name, const glm::mat3& value) {
+void Shader::setMat3(const char* name, const mat3& value) {
     GLint loc = glGetUniformLocation(programID, name);
-    glUniformMatrix3fv(loc, 1, GL_FALSE, glm::value_ptr(value));
+    glUniformMatrix3fv(loc, 1, GL_FALSE, value_ptr(value));
 }
 
-void Shader::setVec3(const char* name, const glm::vec3& value) {
+void Shader::setVec3(const char* name, const vec3& value) {
     GLint loc = glGetUniformLocation(programID, name);
-    glUniform3fv(loc, 1, glm::value_ptr(value));
+    glUniform3fv(loc, 1, value_ptr(value));
 }
 
 void Shader::setFloat(const char* name, float value) {
